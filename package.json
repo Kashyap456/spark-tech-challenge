@@ -1,0 +1,25 @@
+{
+  "name": "cwlite-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Kashyap456/cwlite-backend.git",
+  "author": "Kashyap Chaturvedula <kashyapc@seas.upenn.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-react": "^7.16.7",
+    "axios": "^0.26.1",
+    "cookie-session": "^2.0.0",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4 || ^3 || ^2.3.0 || ^1.7.0"
+  }
+}
