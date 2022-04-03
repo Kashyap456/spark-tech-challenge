@@ -43,6 +43,6 @@
     "babelOptions": {
       
    },
-   "requireConfigFile": false,
+   "requireConfigFile": false
   }
 }
