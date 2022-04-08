@@ -41,7 +41,7 @@
   "parserOptions": {
     "ecmaVersion": 2017,
     "babelOptions": {
-      
+      "presets": ["@babel/preset-react"]
    },
    "requireConfigFile": false
   }

@@ -6,7 +6,7 @@ const { Schema, model } = mongoose
 
 const questionSchema = new Schema({
   questionText: { type: String, required: true },
-  answer: { type: String },
+  answer: { type: String, default: '' },
   author: { type: String, required: true },
 
   created_at: Date,

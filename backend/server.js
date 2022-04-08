@@ -18,11 +18,15 @@ const app = express()
 
 app.use(express.json())
 
+app.use(express.static('dist'))
+
 app.use(
   cookieSession({
     name: 'session',
     keys: ['ezreal'],
-    maxAge: 10 * 1000,
+    maxAge: 10 * 1000 * 24 * 60,
+    httpOnly: false,
+    secure: false,
   }),
 )
 
@@ -33,9 +37,17 @@ app.get('/', (req, res) => {
 app.use('/account', AccountRouter)
 app.use('/api/questions', ApiRouter)
 
-app.use((err, res, req, next) => {
-  res.status(500)
-  res.render('error', { error: err })
+// set the initial entry point
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'))
+})
+
+app.use((err, req, res, next) => {
+  if (!res.headersSent) {
+    res.send(err.message)
+    // next(err)
+  }
+  res.status(400)
 })
 
 app.listen(3000, () => {

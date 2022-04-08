@@ -1,25 +1,42 @@
 {
   "name": "cwlite-backend",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/Kashyap456/cwlite-backend.git",
   "author": "Kashyap Chaturvedula <kashyapc@seas.upenn.edu>",
   "license": "MIT",
+  "scripts": {
+    "backend:dev": "nodemon ./backend/server.js",
+    "backend:start": "node ./backend/server.js",
+    "frontend:dev": "parcel watch ./frontend/src/index.html",
+    "frontend:build": "parcel build ./frontend/src/index.html"
+  },
   "dependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-react": "^7.16.7",
+    "@headlessui/react": "^1.5.0",
+    "@parcel/transformer-react-refresh-wrap": "^2.4.1",
+    "autoprefixer": "^10.4.4",
     "axios": "^0.26.1",
     "cookie-session": "^2.0.0",
-    "eslint": "^8.12.0",
-    "eslint-config-airbnb": "^19.0.4",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
     "express": "^4.17.3",
-    "mongoose": "^6.2.9"
+    "mongoose": "^6.2.9",
+    "nodemon": "^2.0.15",
+    "postcss": "^8.4.12",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0",
+    "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.3.0",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4 || ^3 || ^2.3.0 || ^1.7.0"
+    "@types/express": "^4.17.13",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "parcel": "^2.4.1",
+    "process": "^0.11.10"
   }
 }
