@@ -6,7 +6,7 @@ const QuestionScroller = ({ questions, logged, setModal }) => {
   const navigate = useNavigate()
 
   return (
-    <div className="w-3/12 max-h-3/4">
+    <div className="max-h-screen w-3/12 overflow-y-scroll">
       {(!logged) && (
       <button
         className="mb-2 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4"

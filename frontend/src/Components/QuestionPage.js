@@ -43,8 +43,8 @@ const QuestionPage = () => {
     <div className="container mx-auto">
       <Modal state={modalState} setModal={setModal} title="Add a question!" />
       <div className="flex flex-col">
-        <div className="flex flex-row justify-between">
-          <h1>CAMPUSWIRE LITE</h1>
+        <div className="flex flex-row justify-between bg-slate-300">
+          <h1 className="text-2xl">CAMPUSWIRE LITE</h1>
           <div>
             {logged && (
               <button
@@ -60,7 +60,7 @@ const QuestionPage = () => {
             )}
           </div>
         </div>
-        <div className="flex flex-row">
+        <div className="flex flex-row gap-12">
           <QuestionScroller logged={logged} questions={questions} setModal={setModal} />
           <QuestionDisplay logged={logged} questions={questions} updateState={updateState} />
         </div>
