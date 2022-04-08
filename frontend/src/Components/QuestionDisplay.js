@@ -27,7 +27,7 @@ const QuestionDisplay = ({ questions, logged, updateState }) => {
           className="flex flex-col items-center"
           onSubmit={async e => {
             e.preventDefault()
-            await axios.post('/api/questions/answer', { id, answer: textArea })
+            await axios.post('/api/questions/answer', { id: question._id, answer: textArea })
             setAnswer('')
             updateState()
           }}
