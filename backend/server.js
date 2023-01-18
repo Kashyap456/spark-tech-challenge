@@ -7,7 +7,7 @@ const path = require('path')
 const AccountRouter = require('./routes/account')
 const ApiRouter = require('./routes/api')
 
-const MONGO_URI = 'mongodb+srv://kashyap456:c9blaber@cluster0.ppm6c.mongodb.net/cw-lite?retryWrites=true&w=majority'
+const MONGO_URI = 'mongodb+srv://kashyap456:c9blaber@cluster0.ppm6c.mongodb.net/fake-twitter?retryWrites=true&w=majority'
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
@@ -31,11 +31,11 @@ app.use(
 )
 
 app.get('/', (req, res) => {
-  res.send('welcome to the CW lite API/DB')
+  res.send('welcome to the Fake Twitter API/DB')
 })
 
 app.use('/account', AccountRouter)
-app.use('/api/questions', ApiRouter)
+app.use('/api/tweets', ApiRouter)
 
 // set the initial entry point
 app.get('*', (req, res) => {

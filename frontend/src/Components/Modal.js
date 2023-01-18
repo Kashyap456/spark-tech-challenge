@@ -20,10 +20,10 @@ const Modal = ({
           <Dialog.Title>{title}</Dialog.Title>
           <form onSubmit={async e => {
             e.preventDefault()
-            await axios.post('/api/questions/add', { questionText: text })
+            await axios.post('/api/tweets/send', { tweetText: text })
             setText('')
-            updateState()
             setModal(false)
+            updateState()
           }}
           >
             <textarea value={text} placeholder="Enter new answer here!" onChange={e => setText(e.target.value)} />

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import QuestionCard from './QuestionCard'
+import TweetCard from './TweetCard'
 
-const QuestionScroller = ({ questions, logged, setModal }) => {
+const TweetScroller = ({ tweets, logged, setModal }) => {
   const navigate = useNavigate()
 
   return (
@@ -15,7 +15,7 @@ const QuestionScroller = ({ questions, logged, setModal }) => {
           navigate('../login', { replace: true })
         }}
       >
-        Log in to add answers!
+        Log in to tweet!
       </button>
       )}
       {(logged) && (
@@ -26,12 +26,12 @@ const QuestionScroller = ({ questions, logged, setModal }) => {
           setModal(true)
         }}
       >
-        Add a Question
+        Tweet!
       </button>
       )}
-      {questions.map(q => <Link className="block mb-2 border-2 border-black rounded-md" to={`/post/${q._id}`}>{q.questionText}</Link>)}
+      {tweets.map(q => <TweetCard tweet={q} />)}
     </div>
   )
 }
 
-export default QuestionScroller
+export default TweetScroller

@@ -7,7 +7,7 @@ import {
 import LoginForm from './Components/LoginForm'
 import App from './App'
 import SignUpPage from './Components/SignUpPage'
-import QuestionPage from './Components/QuestionPage'
+import HomePage from './Components/HomePage'
 
 const app = document.getElementById('app')
 const root = createRoot(app)
@@ -15,7 +15,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<QuestionPage />}>
+        <Route path="/" element={<HomePage />}>
           <Route path="/post/:id" />
         </Route>
         <Route path="/signup" element={<SignUpPage />} />
