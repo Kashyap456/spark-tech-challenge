@@ -53,7 +53,7 @@ const HomePage = () => {
 
   return (
     <div className="container mx-auto">
-      <Modal state={modalState} setModal={setModal} title="Tweet!" />
+      <Modal state={modalState} setModal={setModal} title="Tweet!" updateState={updateState} />
       <div className="flex flex-col">
         <div className="flex flex-row justify-between bg-slate-300">
           <h1 className="text-2xl">FAKE TWITTER</h1>
